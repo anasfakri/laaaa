@@ -38,8 +38,10 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.AB, function () {
     if (n1 != 0 && n2 != 0) {
-        operation += 1
-        aa2()
+        if (operation < 4) {
+            operation += 1
+            aa2()
+        }
     }
 })
 input.onButtonPressed(Button.B, function () {
@@ -53,10 +55,8 @@ function reset () {
     n2 = 0
     operation = 0
 }
-let answer = 0
-let operation = 0
 let n2 = 0
 let n1 = 0
-n1 = 0
-n2 = 0
-operation = 0
+let answer = 0
+let operation = 0
+reset()
